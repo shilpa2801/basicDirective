@@ -1,0 +1,10 @@
+<div class="col-lg-6">
+<input type="text" class="form-control" name="username" [(ngModel)]="username">
+
+<p *ngIf="status; else nouser">{{displayName}}</p>
+<ng-template #nouser>
+	<p>No User Added</p>
+</ng-template>
+<button class="btn btn-success" [disabled]="!username" (click)="addUserName()">Add Username</button>
+<button class="btn btn-success" [disabled]="!username" (click)="reset()">Reset</button>
+</div>
